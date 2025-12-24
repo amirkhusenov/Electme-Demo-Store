@@ -2299,16 +2299,16 @@ body .wpc-filters-open-button-container a.wpc-open-close-filters-button {
 /* Адаптивная сетка для elementor-image-carousel через flex */
 .elementor-image-carousel-wrapper {
     display: flex !important;
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap !important;
     gap: 20px !important;
     max-width: 100% !important;
-    overflow-x: auto !important;
+    overflow-x: visible !important;
     justify-content: center !important;
     width: 100% !important;
 }
 
 .elementor-image-carousel-wrapper[style] {
-    flex-wrap: nowrap !important;
+    flex-wrap: wrap !important;
 }
 
 .elementor-image-carousel-wrapper>div {
@@ -2353,12 +2353,24 @@ body .wpc-filters-open-button-container a.wpc-open-close-filters-button {
 @media (max-width: 768px) {
     .elementor-image-carousel-wrapper {
         gap: 12px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .elementor-image-carousel>div {
+        flex: 0 0 calc(50% - 6px) !important;
+        max-width: calc(50% - 6px) !important;
     }
 }
 
 @media (max-width: 480px) {
     .elementor-image-carousel-wrapper {
         gap: 10px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .elementor-image-carousel>div {
+        flex: 0 0 calc(50% - 5px) !important;
+        max-width: calc(50% - 5px) !important;
     }
 }
 
